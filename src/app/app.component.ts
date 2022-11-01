@@ -15,8 +15,13 @@ export class AppComponent {
     { task: 'Learn TypeScript', completed: false },
     { task: 'Learn JavaScript', completed: true },
     { task: 'Learn HTML', completed: false },
-    { task: 'Learn CSS', completed: false },
+    { task: 'Learn CSS', completed: true },
   ];
+
+// get ToDo list and filter it
+getToDoList(): ToDo[]{
+  return this.todo.filter(t => t.completed);
+}
 
 
   addTask(formParam: NgForm): void{

@@ -1,17 +1,18 @@
-<h1>Current task: {{title}}</h1>
-
-<form #nameForm="ngForm">
-  <label for="serch">Search</label>
- <input name="search" id="search" ngModel />
-</form>
+<app-header></app-header>
+<!--input for filtering list -->
+<!-- <input type="text" placeholder="Search" [(ngModel)]="searchText"> -->
 
 <div *ngFor="let job of todo; index as i">
   <p>{{i + 1}} {{job.task| uppercase}}</p>
   <button *ngIf="!job.completed" (click)="completeTask(i)">Complete!!</button>
 </div>
 
+
+<hr>
+
+
 <form #nameForm="ngForm" (ngSubmit)="addTask(nameForm)">
   <label for="task">Enter a new task</label>
- <input name="task" id="task" ngModel />
- <button>Add task</button>
+  <input name="task" id="task" ngModel/>
+  <button>Add task</button>
 </form>

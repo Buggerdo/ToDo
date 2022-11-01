@@ -1,8 +1,8 @@
 <h1>Current task: {{title}}</h1>
 
-<form #nameForm="ngForm" (ngSubmit)="addTask(nameForm)">
-  <label for="task">Search</label>
- <input name="task" id="task" ngModel />
+<form #nameForm="ngForm">
+  <label for="serch">Search</label>
+ <input name="search" id="search" ngModel />
 </form>
 
 <div *ngFor="let job of todo; index as i">
